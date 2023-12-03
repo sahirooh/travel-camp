@@ -1,8 +1,20 @@
-import React from 'react'
+import Image from "next/image"
 
-const Buttons = () => {
+type ButtonProps = {
+    type: 'button' | 'submit'
+    title: string
+    icon: string
+    variant: 'btn_dark_green'
+}
+
+const Buttons = ({ type, title, icon, variant } : ButtonProps) => {
   return (
-    <div>Buttons</div>
+    <button
+    type={type}
+    className={`${variant} flexCenter border rounded-full gap-3`}>
+       { icon && <Image src={icon} alt="icon" height={20} width={20} /> }
+       <label className="bold-16 whitespace-nowrap">{title}</label>
+    </button>
   )
 }
 
