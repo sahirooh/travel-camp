@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Buttons from "./Buttons";
 
 const Hero = () => {
   return (
@@ -23,6 +24,40 @@ const Hero = () => {
           seeing the incorruptible beauty of nature. We can help you on an
           adventure around the world in just one app
         </p>
+
+        <div className="flex flex-wrap gap-5 my-10">
+          <div className="flexCenter gap-2">
+            {
+              Array(5).fill(1).map((_, index) => (
+                <Image
+                  key={index}
+                  src="/star.svg"
+                  alt="star"
+                  width={24}
+                  height={24}
+                />
+              ))
+            }
+          </div>
+
+          <p className="bold-16 lg:bold-20 text-blue-70">
+            198k
+            <span className="regular-16 lg:regular-20 ml-2 ">Excellent Reviews</span>
+          </p>
+        </div>
+
+        <div className="flex flex-col w-full gap-3 sm:flex-row">
+          <Buttons
+          type="button"
+          variant="btn_green"
+          title='Download Now' />
+
+          <Buttons 
+          type="button"
+          variant="btn_white_text"
+          title='How we work?'
+          icon="/play.svg" />
+        </div>
       </div>
     </section>
   );
