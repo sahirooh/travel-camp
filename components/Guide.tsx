@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Guide = () => {
   return (
-    <div>Guide</div>
-  )
-}
+    <section className="flexCenter flex-col">
+      <div></div>
+    </section>
+  );
+};
 
-export default Guide
+export default Guide;
