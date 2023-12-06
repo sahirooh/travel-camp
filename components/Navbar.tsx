@@ -28,19 +28,21 @@ const Navbar = () => {
       </ul>
 
       <div className="hidden lg:flexCenter">
-          <Buttons
-            type="button"
-            title="Login"
-            icon="/user.svg"
-            variant="btn_dark_green"
-          />
+        <Buttons
+          type="button"
+          title="Login"
+          icon="/user.svg"
+          variant="btn_dark_green"
+        />
       </div>
 
-      <Image src='menu.svg'
-      alt="menu"
-      width={36}
-      height={36}
-      className="inline-block cursor-pointer lg:hidden" />
+      <Image
+        src="menu.svg"
+        alt="menu"
+        width={36}
+        height={36}
+        className="inline-block cursor-pointer lg:hidden"
+      />
     </nav>
   );
 };

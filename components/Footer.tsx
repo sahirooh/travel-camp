@@ -1,18 +1,22 @@
+"use client";
 import { FOOTER_CONTACT_INFO, FOOTER_LINKS, SOCIALS } from "@/constants";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
   return (
     <footer className=" max-container pb-10 padding-container">
       <div className="flex pb-14 justify-between gap-6 flex-wrap">
-        <Image
-          className="flex self-start"
-          src="/hilink-logo.svg"
-          alt="logo"
-          width={80}
-          height={80}
-        />
+        <Link href="/">
+          <Image
+            className="flex self-start"
+            src="/hilink-logo.svg"
+            alt="logo"
+            width={80}
+            height={80}
+          />
+        </Link>
 
         <div className="flex flex-wrap gap-[110px] justify-between h-full">
           {FOOTER_LINKS.map((foot) => (
@@ -48,7 +52,9 @@ const Footer = () => {
       </div>
 
       <div className="border flex bg-gray-20" />
-      <p className="text-gray-30 regular-14 py-10 text-center w-full">2023 Hilink | All rights reserved</p>
+      <p className="text-gray-30 regular-14 py-10 text-center w-full">
+        2023 Hilink | All rights reserved
+      </p>
     </footer>
   );
 };
