@@ -4,13 +4,17 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <section className=" max-container padding-container">
+    <footer className=" max-container pb-10 padding-container">
+      <div className="flex pb-14 justify-between gap-6 flex-wrap">
+        <Image
+          className="flex self-start"
+          src="/hilink-logo.svg"
+          alt="logo"
+          width={80}
+          height={80}
+        />
 
-      <div className="flex justify-between gap-6 flex-wrap">
-
-        <Image className="flex self-start" src="/hilink-logo.svg" alt="logo" width={80} height={80} />
-
-        <div className="flex w-[30%] justify-between h-full">
+        <div className="flex flex-wrap gap-[110px] justify-between h-full">
           {FOOTER_LINKS.map((foot) => (
             <div key={foot.title} className="flex flex-col gap-4">
               <h2 className="bold-18">{foot.title}</h2>
@@ -36,15 +40,16 @@ const Footer = () => {
         <div className="flex flex-col gap-4">
           <h2 className="bold-18">Socials</h2>
           <div className="flex gap-4">
-            {
-              SOCIALS.links.map((index) => (
-                  <Image src={index} alt={index} width={26} height={26} />
-              ))
-            }
+            {SOCIALS.links.map((index) => (
+              <Image src={index} alt={index} width={26} height={26} />
+            ))}
           </div>
         </div>
       </div>
-    </section>
+
+      <div className="border flex bg-gray-20" />
+      <p className="text-gray-30 regular-14 py-10 text-center w-full">2023 Hilink | All rights reserved</p>
+    </footer>
   );
 };
 
