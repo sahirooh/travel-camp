@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="hide-scrollbar overflow-x-hidden">
         <Navbar />
         <main>{children}</main>
         <Footer />
