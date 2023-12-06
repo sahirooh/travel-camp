@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import React from 'react'
 import Buttons from './Buttons';
 
 const GetApp = () => {
@@ -9,9 +8,9 @@ const GetApp = () => {
         <div className='z-20 flex flex-col flex-1 w-full items-start
         justify-center gap-10 '>
           <h2 className='bold-40 lg:bold-64 xl:max-w-[320px]'>Get For Free Now!</h2>
-          <p className='text-gray-10'>Available on iOS and Android</p>
+          <p className='text-gray-10'>Available on iOS and Android, Download Now</p>
 
-          <div className='flex gap-3 flex-col xl:flex-row whitespace-nowrap w-full'>
+          <div className='flex gap-4 flex-col xl:flex-row whitespace-nowrap w-full'>
             <Buttons 
             type="button"
             title="App Store"
